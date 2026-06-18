@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naija Wander — Discover Nigeria</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SMART SCROLLING NAVIGATION -->
+  <nav class="navbar" id="main-navbar">
+    <span class="brand-logo">Naija Wander</span>
+    <div class="menu-toggle" id="mobile-menu-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <!-- FULL SCREEN SLIDE-OUT DRAWER -->
+    <div class="nav-drawer" id="nav-drawer">
+      <span class="close-btn" id="close-drawer-btn">×</span>
+      <div class="drawer-links">
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About Us</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO HEADER HERO CONTAINER -->
+  <header class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-sub">DISCOVER THE REAL NIGERIA</span>
+      <h1 class="hero-title">Where Every <span>Journey</span> Begins</h1>
+      <p class="hero-para">From the red rivers of Cross River to the ancient walls of Kano — Nigeria is not one place. It is a thousand worlds waiting to be found.</p>
+      <button class="explore-btn" onclick="document.getElementById('destinations').scrollIntoView({behavior: 'smooth'})">EXPLORE COLLECTIONS</button>
+    </div>
+    <div class="scroll-indicator-box">
+      <span class="scroll-text">SCROLL</span>
+    </div>
+  </header>
+
+  <!-- STATS & ABOUT SECTION (FIXED CAT CONTAINMENT & SPACING) -->
+  <section class="about-section" id="about">
+    <div class="stats-grid">
+      <div class="stat-item"><h3>36</h3><p>States explored</p></div>
+      <div class="stat-item"><h3>500+</h3><p>Hidden gems listed</p></div>
+      <div class="stat-item"><h3>250+</h3><p>Curated tours</p></div>
+      <div class="stat-item"><h3>12k+</h3><p>Travellers guided</p></div>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image-wrapper">
+        <!-- The cat image is now strictly constrained inside this block borders -->
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&q=80" alt="Naija Wander Explorer Cat" class="fixed-hero-img"/>
+      </div>
+      <div class="about-text-block">
+        <span class="sub-title">TOP DESTINATIONS</span>
+        <h2>Places that stay with you forever</h2>
+        <p class="padded-desc">Hand-picked locations across Nigeria — from the iconic to the utterly undiscovered.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATE EXPLORER SYSTEM WITH SWIPING ATTRACTIONS -->
+  <section class="state-explorer-section" id="destinations">
+    <div class="section-header">
+      <h2>Regional Showcases</h2>
+      <p>Tap a state to explore curated tourist attractions</p>
+    </div>
+
+    <!-- HORIZONTAL BUTTON TABS -->
+    <div class="state-tabs-container">
+      <button class="state-tab active" onclick="switchState(this, 'enugu')">Enugu</button>
+      <button class="state-tab" onclick="switchState(this, 'lagos')">Lagos</button>
+      <button class="state-tab" onclick="switchState(this, 'crossriver')">Cross River</button>
+      <button class="state-tab" onclick="switchState(this, 'bauchi')">Bauchi</button>
+    </div>
+
+    <!-- MAIN ATTRACTIONS PANELS BOX -->
+    <div class="attractions-scroll-panel">
+      
+      <!-- ENUGU STATE PANEL -->
+      <div id="enugu" class="state-panel active">
+        <div class="scroll-cards-row">
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&q=80" alt="Ngwo Pine Forest"/>
+            <div class="card-body">
+              <h3>Ngwo Pine Forest & Caves</h3>
+              <p>A majestic pine canopy concealing hidden limestone valley pools and falls.</p>
+              <a href="https://en.wikipedia.org/wiki/Ngwo_Pine_Forest" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Udi Hills Peaks"/>
+            <div class="card-body">
+              <h3>Udi Hills</h3>
+              <p>The spectacular dramatic peaks overlooking the beautiful Coal City skyline.</p>
+              <a href="https://en.wikipedia.org/wiki/Enugu" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAGOS STATE PANEL -->
+      <div id="lagos" class="state-panel">
+        <div class="scroll-cards-row">
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Tarkwa Bay Island Beach"/>
+            <div class="card-body">
+              <h3>Tarkwa Bay Island</h3>
+              <p>An isolated oasis of calm Atlantic waves away from the mainland rush.</p>
+              <a href="https://en.wikipedia.org/wiki/Tarkwa_Bay" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CROSS RIVER STATE PANEL -->
+      <div id="crossriver" class="state-panel">
+        <div class="scroll-cards-row">
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=600&q=80" alt="Obudu Mountain Valley clouds"/>
+            <div class="card-body">
+              <h3>Obudu Mountain Resort</h3>
+              <p>Breathtaking high-altitude valleys blanketed by gorgeous low-hanging clouds.</p>
+              <a href="https://en.wikipedia.org/wiki/Obudu_Mountain_Resort" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAUCHI STATE PANEL -->
+      <div id="bauchi" class="state-panel">
+        <div class="scroll-cards-row">
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1547407139-3c911a660559?w=600&q=80" alt="Yankari Safari Elephant Reserve"/>
+            <div class="card-body">
+              <h3>Yankari Game Reserve</h3>
+              <p>Historic warm springs safari home to wild elephants and savannah wildlife.</p>
+              <a href="https://en.wikipedia.org/wiki/Yankari_Game_Reserve" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CONTAINER SECTION -->
+  <section class="newsletter-section" id="newsletter">
+    <h2>Subscribe to the Wanderlust Letter</h2>
+    <p>Get quarterly premium, off-grid adventure breakdowns straight to your primary inbox.</p>
+    <div class="input-group">
+      <input type="email" placeholder="Your primary email address">
+      <button>Join Club</button>
+    </div>
+  </section>
+
+  <!-- MAIN FOOTER -->
+  <footer class="main-footer">
+    <p class="footer-logo">Naija Wander</p>
+    <p>© 2026 Naija Wander · Discover Nigeria</p>
+    <a href="mailto:agumirabel3@gmail.com" class="footer-email">agumirabel3@gmail.com</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
