@@ -1,0 +1,78 @@
+/**
+ * Naija Wander Core Application Controller Engine
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+  // 1. SMART NAVBAR TRACKING CONTROLLER (Hides on Scroll Down, Shows on Scroll Up)
+  let lastScrollTopPosition = 0;
+  const globalNavbar = document.getElementById('main-navbar');
+
+  window.addEventListener('scroll', () => {
+    let currentScrollTopPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScrollTopPosition > lastScrollTopPosition && currentScrollTopPosition > 90) {
+      // User is scrolling downwards -> pull navbar upwards out of sight
+      if (globalNavbar) globalNavbar.classList.add('nav-hidden');
+    } else {
+      // User is scrolling upwards -> bring navbar back down instantly
+      if (globalNavbar) globalNavbar.classList.remove('nav-hidden');
+    }
+    
+    // Prevent negative bounds tracking numbers on mobile bounce elastisity
+    lastScrollTopPosition = currentScrollTopPosition <= 0 ? 0 : currentScrollTopPosition;
+  }, { passive: true });
+
+
+  // 2. NAVIGATION DRAWER INTERACTIVE SLIDE CONTROLLER
+  const openDrawerBtn = document.getElementById('mobile-menu-btn');
+  const closeDrawerBtn = document.getElementById('close-drawer-btn');
+  const sideNavDrawer = document.getElementById('nav-drawer');
+
+  if (openDrawerBtn && sideNavDrawer && closeDrawerBtn) {
+    // Open full navigation menu
+    openDrawerBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      sideNavDrawer.classList.add('active');
+    });
+
+    // Close full navigation menu
+    closeDrawerBtn.addEventListener('click', () => {
+      sideNavDrawer.classList.remove('active');
+    });
+
+    // Close menu automatically if an internal link is triggered
+    const internalLinks = sideNavDrawer.querySelectorAll('a');
+    internalLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        sideNavDrawer.classList.remove('active');
+      });
+    });
+  }
+});
+
+
+// 3. HORIZONTAL REGIONAL EXPLORER TAB SWITCHER CONTROLLER
+function switchState(clickedTabButtonElement, targetStatePanelId) {
+  if (!clickedTabButtonElement || !targetStatePanelId) return;
+
+  // Kill the active button background highlighting indicator styles on all tabs
+  const allStateTabs = document.querySelectorAll('.state-tab');
+  allStateTabs.forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  // Collapse visibility settings instantly on all state row layout panel slots
+  const allStatePanels = document.querySelectorAll('.state-panel');
+  allStatePanels.forEach(panel => {
+    panel.classList.remove('active');
+  });
+
+  // Activate style indicators onto the specific tab button clicked
+  clickedTabButtonElement.classList.add('active');
+
+  // Trigger content display viewport properties for the matching selected state
+  const targetPanelContainer = document.getElementById(targetStatePanelId);
+  if (targetPanelContainer) {
+    targetPanelContainer.classList.add('active');
+  }
+}
