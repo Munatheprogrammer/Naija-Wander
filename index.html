@@ -32,7 +32,7 @@
     </div>
   </nav>
 
-  <!-- HERO HEADER HERO CONTAINER -->
+  <!-- HERO HEADER CONTAINER -->
   <header class="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -57,7 +57,7 @@
 
     <div class="about-container">
       <div class="about-image-wrapper">
-        <!-- The cat image is now strictly constrained inside this block borders -->
+        <!-- Restored the classic premium fluffy orange cat image -->
         <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&q=80" alt="Naija Wander Explorer Cat" class="fixed-hero-img"/>
       </div>
       <div class="about-text-block">
@@ -68,19 +68,21 @@
     </div>
   </section>
 
-  <!-- STATE EXPLORER SYSTEM WITH SWIPING ATTRACTIONS -->
+  <!-- STATE EXPLORER SYSTEM WITH MULTIPLE ATTRACTIONS -->
   <section class="state-explorer-section" id="destinations">
     <div class="section-header">
       <h2>Regional Showcases</h2>
-      <p>Tap a state to explore curated tourist attractions</p>
+      <p>Tap a state to explore multiple curated tourist attractions</p>
     </div>
 
-    <!-- HORIZONTAL BUTTON TABS -->
+    <!-- HORIZONTAL BUTTON TABS (EXPANDED LIST) -->
     <div class="state-tabs-container">
       <button class="state-tab active" onclick="switchState(this, 'enugu')">Enugu</button>
       <button class="state-tab" onclick="switchState(this, 'lagos')">Lagos</button>
       <button class="state-tab" onclick="switchState(this, 'crossriver')">Cross River</button>
       <button class="state-tab" onclick="switchState(this, 'bauchi')">Bauchi</button>
+      <button class="state-tab" onclick="switchState(this, 'kano')">Kano</button>
+      <button class="state-tab" onclick="switchState(this, 'abuja')">Abuja</button>
     </div>
 
     <!-- MAIN ATTRACTIONS PANELS BOX -->
@@ -92,7 +94,7 @@
           <div class="attraction-card">
             <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&q=80" alt="Ngwo Pine Forest"/>
             <div class="card-body">
-              <h3>Ngwo Pine Forest & Caves</h3>
+              <h3>Ngwo Pine Forest &amp; Caves</h3>
               <p>A majestic pine canopy concealing hidden limestone valley pools and falls.</p>
               <a href="https://en.wikipedia.org/wiki/Ngwo_Pine_Forest" target="_blank" class="explore-link">Explore Area →</a>
             </div>
@@ -103,6 +105,14 @@
               <h3>Udi Hills</h3>
               <p>The spectacular dramatic peaks overlooking the beautiful Coal City skyline.</p>
               <a href="https://en.wikipedia.org/wiki/Enugu" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1432406186174-2b24f48603e3?w=600&q=80" alt="Awhum Waterfall"/>
+            <div class="card-body">
+              <h3>Awhum Waterfall</h3>
+              <p>A massive single-trail stream cascading down inside an immersive limestone cave canyon.</p>
+              <a href="https://en.wikipedia.org/wiki/Awhum_Waterfall" target="_blank" class="explore-link">Explore Area →</a>
             </div>
           </div>
         </div>
@@ -119,6 +129,22 @@
               <a href="https://en.wikipedia.org/wiki/Tarkwa_Bay" target="_blank" class="explore-link">Explore Area →</a>
             </div>
           </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="Lekki Conservation Centre"/>
+            <div class="card-body">
+              <h3>Lekki Conservation Centre</h3>
+              <p>Home to the longest canopy walkway in Africa over ancient coastal wetlands.</p>
+              <a href="https://en.wikipedia.org/wiki/Lekki_Conservation_Centre" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Nike Art Gallery"/>
+            <div class="card-body">
+              <h3>Nike Art Gallery</h3>
+              <p>An outstanding multi-story treasure chest of historical and contemporary African artwork.</p>
+              <a href="#destinations" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -133,18 +159,79 @@
               <a href="https://en.wikipedia.org/wiki/Obudu_Mountain_Resort" target="_blank" class="explore-link">Explore Area →</a>
             </div>
           </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80" alt="Agbokim Waterfalls"/>
+            <div class="card-body">
+              <h3>Agbokim Waterfalls</h3>
+              <p>Seven spectacular individual stream paths dropping over a lush tropical rain forest cliff lip.</p>
+              <a href="https://en.wikipedia.org/wiki/Agbokim_Waterfalls" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- BAUCHI STATE PANEL -->
       <div id="bauchi" class="state-panel">
         <div class="scroll-cards-row">
+          <!-- FIXED BREAKING BLANK IMAGE PATHS WITH STUNNING NEW NAT-PARK URLS -->
           <div class="attraction-card">
-            <img src="https://images.unsplash.com/photo-1547407139-3c911a660559?w=600&q=80" alt="Yankari Safari Elephant Reserve"/>
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80" alt="Yankari Safari Elephant Reserve"/>
             <div class="card-body">
               <h3>Yankari Game Reserve</h3>
-              <p>Historic warm springs safari home to wild elephants and savannah wildlife.</p>
+              <p>Historic safari wilderness home to wild elephants and beautiful savanna horizons.</p>
               <a href="https://en.wikipedia.org/wiki/Yankari_Game_Reserve" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="Wikki Warm Springs"/>
+            <div class="card-body">
+              <h3>Wikki Warm Springs</h3>
+              <p>A crystal-clear, warm natural spring pool tucked into a sandstone riverbank corner.</p>
+              <a href="#destinations" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KANO STATE PANEL (NEW STAGE) -->
+      <div id="kano" class="state-panel">
+        <div class="scroll-cards-row">
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&q=80" alt="Ancient Kano City Walls"/>
+            <div class="card-body">
+              <h3>Ancient City Walls</h3>
+              <p>Pre-colonial earthen defense layouts built to preserve the historic emirate center.</p>
+              <a href="https://en.wikipedia.org/wiki/Ancient_Kano_City_Walls" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=600&q=80" alt="Dala Hill Lookout"/>
+            <div class="card-body">
+              <h3>Dala Hill</h3>
+              <p>An ancient high-ground peak providing views across the entire historic trading center.</p>
+              <a href="#destinations" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABUJA PANEL (NEW STAGE) -->
+      <div id="abuja" class="state-panel">
+        <div class="scroll-cards-row">
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&q=80" alt="Zuma Rock Monolith"/>
+            <div class="card-body">
+              <h3>Zuma Rock Monolith</h3>
+              <p>The iconic, massive igneous monolith rising majestically directly outside the capital boundary.</p>
+              <a href="https://en.wikipedia.org/wiki/Zuma_Rock" target="_blank" class="explore-link">Explore Area →</a>
+            </div>
+          </div>
+          <div class="attraction-card">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Millennium Park Nature"/>
+            <div class="card-body">
+              <h3>Millennium Park</h3>
+              <p>Beautiful contemporary green spaces designed with elegant Italian water terraces.</p>
+              <a href="#destinations" class="explore-link">Explore Area →</a>
             </div>
           </div>
         </div>
@@ -153,7 +240,7 @@
     </div>
   </section>
 
-  <!-- NEWSLETTER CONTAINER SECTION -->
+  <!-- NEWSLETTER SECTION -->
   <section class="newsletter-section" id="newsletter">
     <h2>Subscribe to the Wanderlust Letter</h2>
     <p>Get quarterly premium, off-grid adventure breakdowns straight to your primary inbox.</p>
